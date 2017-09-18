@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Crop and Frame</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <div class="container" style="margin-top: 40px;">
         <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-            <h1 class="text-center">Crop and Frame</h1>
+            <h1 class="text-center"><span class="fa fa-crop"></span> Crop and Frame</h1>
+            <hr>
+            <div class="row">
+                <div class="col-xs-4 text-center">
+                    <div class="steplabel steplabel-prev">1</div> Choose
+                </div>
+                <div class="col-xs-4 text-center">
+                    <div class="steplabel steplabel-now">2</div> Crop
+                </div>
+                <div class="col-xs-4 text-center">
+                    <div class="steplabel steplabel-next">3</div> Save
+                </div>
+            </div>
+            <hr>
+            <div id="content" class="text-center">
+                <p><img id="cropping" src="/a.png" width="300" height="300"></p>
+            </div>
+            <hr>
+            <button type="button" class="btn btn-success btn-lg btn-block">Next</button>
         </div>
     </div>
 </body>
+
 </html>

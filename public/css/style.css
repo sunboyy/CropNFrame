@@ -1,0 +1,21 @@
+.steplabel {
+    width: 26px;
+    height: 26px;
+    padding: 3px;
+    margin: 2px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 13px;
+}
+.steplabel-prev {
+    background-color: #5cb85c;
+}
+.steplabel-now {
+    background-color: #f0ad4e;
+}
+.steplabel-next {
+    background-color: #ccc;
+}
+#cropping {
+    max-width: 100%;
+}
