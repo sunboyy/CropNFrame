@@ -10,43 +10,44 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
 </head>
 
-<body>
+<body ng-app="cropnframe" ng-controller="cropnframe">
     <div class="container" style="margin-top: 40px;">
         <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
             <h1 class="text-center"><span class="fa fa-crop"></span> Crop and Frame</h1>
             <hr>
             <div class="row">
                 <div class="col-xs-4 text-center">
-                    <div id="step-choose" class="steplabel steplabel-prev">1</div> Choose
+                    <div class="steplabel" ng-class="{'steplabel-now':step==1,'steplabel-prev':step!=1}">1</div> Choose
                 </div>
                 <div class="col-xs-4 text-center">
-                    <div id="step-crop" class="steplabel steplabel-now">2</div> Crop
+                    <div class="steplabel" ng-class="{'steplabel-prev':step==3,'steplabel-now':step==2,'steplabel-next':step==1}">2</div> Crop
                 </div>
                 <div class="col-xs-4 text-center">
-                    <div id="step-save" class="steplabel steplabel-next">3</div> Save
+                    <div class="steplabel" ng-class="{'steplabel-next':step!=3,'steplabel-now':step==3}">3</div> Save
                 </div>
             </div>
             <hr>
-            <div id="content-choose" class="text-center">
+            <div id="content-choose" ng-hide="step != 1" class="text-center">
                 <div class="input-group">
-                    <input type="text" name="showSrc" id="showSrcField" class="form-control" disabled="disabled">
+                    <input type="text" name="showSrc" id="showSrcField" class="form-control" disabled="disabled" ng-value="filename()">
                     <span class="input-group-btn">
                         <label class="btn btn-default">
-                            Choose Image<input type="file" name="fileField" class="hidden" id="fileField" accept="image/*">
+                            Choose Image<input type="file" name="fileField" class="hidden" id="fileField" accept="image/*" ng-model="file">
                         </label>
                     </span>
                 </div>
             </div>
-            <div id="content-crop" class="text-center">
+            <div id="content-crop" ng-hide="step != 2" class="text-center">
                 <p><img id="cropping" src="" width="300" height="300"></p>
             </div>
-            <div id="content-save" class="text-center">
-                <p><img id="cropping" src="/a.png" width="300" height="300"></p>
+            <div id="content-save" ng-hide="step != 3" class="text-center">
+                <p><img src="https://image.flaticon.com/teams/slug/freepik.jpg" width="300" height="300"></p>
             </div>
             <hr>
-            <button type="button" class="btn btn-success btn-lg btn-block">Next</button>
+            <button type="button" class="btn btn-success btn-lg btn-block disabled" disabled id="nextBtn">Next</button>
         </div>
     </div>
     <script src="/js/cropnframe.js"></script>

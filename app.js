@@ -9,6 +9,7 @@ app.use('/js', express.static('node_modules/jquery/dist'));
 app.use('/js', express.static('node_modules/cropper/dist'));
 app.use('/css', express.static('node_modules/font-awesome/css'));
 app.use('/fonts', express.static('node_modules/font-awesome/fonts'));
+app.use('/js/angular.min.js', express.static('node_modules/angular/angular.min.js'));
 app.use(express.static('public'));
 
 require('./router')(app);
