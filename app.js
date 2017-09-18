@@ -5,6 +5,8 @@ var app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static('node_modules/bootstrap/dist'));
+app.use('/js', express.static('node_modules/jquery/dist'));
+app.use('/js', express.static('node_modules/cropper/dist'));
 
 require('./router')(app);
 
