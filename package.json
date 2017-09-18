@@ -1,0 +1,32 @@
+{
+  "name": "cropnframe",
+  "version": "1.0.0",
+  "description": "Crop and Frame webpage",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunboyy/CropNFrame.git"
+  },
+  "keywords": [
+    "Crop",
+    "Frame",
+    "Template",
+    "Image"
+  ],
+  "author": "Surawich Laprattanatrai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunboyy/CropNFrame/issues"
+  },
+  "homepage": "https://github.com/sunboyy/CropNFrame#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "bootstrap": "^3.3.7",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "jimp": "^0.2.28"
+  }
+}
