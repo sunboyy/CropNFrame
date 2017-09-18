@@ -19,23 +19,37 @@
             <hr>
             <div class="row">
                 <div class="col-xs-4 text-center">
-                    <div class="steplabel steplabel-prev">1</div> Choose
+                    <div id="step-choose" class="steplabel steplabel-prev">1</div> Choose
                 </div>
                 <div class="col-xs-4 text-center">
-                    <div class="steplabel steplabel-now">2</div> Crop
+                    <div id="step-crop" class="steplabel steplabel-now">2</div> Crop
                 </div>
                 <div class="col-xs-4 text-center">
-                    <div class="steplabel steplabel-next">3</div> Save
+                    <div id="step-save" class="steplabel steplabel-next">3</div> Save
                 </div>
             </div>
             <hr>
-            <div id="content" class="text-center">
+            <div id="content-choose" class="text-center">
+                <div class="input-group">
+                    <input type="text" name="showSrc" id="showSrcField" class="form-control" disabled="disabled">
+                    <span class="input-group-btn">
+                        <label class="btn btn-default">
+                            Choose Image<input type="file" name="fileField" class="hidden" id="fileField" accept="image/*">
+                        </label>
+                    </span>
+                </div>
+            </div>
+            <div id="content-crop" class="text-center">
+                <p><img id="cropping" src="" width="300" height="300"></p>
+            </div>
+            <div id="content-save" class="text-center">
                 <p><img id="cropping" src="/a.png" width="300" height="300"></p>
             </div>
             <hr>
             <button type="button" class="btn btn-success btn-lg btn-block">Next</button>
         </div>
     </div>
+    <script src="/js/cropnframe.js"></script>
 </body>
 
 </html>

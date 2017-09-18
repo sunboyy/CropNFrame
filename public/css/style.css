@@ -19,3 +19,6 @@
 #cropping {
     max-width: 100%;
 }
+#content-crop, #content-save {
+    display: none;
+}
