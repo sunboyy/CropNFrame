@@ -26,7 +26,7 @@
     "angular": "^1.6.6",
     "body-parser": "^1.18.1",
     "bootstrap": "^3.3.7",
-    "cropper": "^3.0.0",
+    "croppie": "^2.5.1",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "font-awesome": "^4.7.0",
