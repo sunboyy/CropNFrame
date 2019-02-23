@@ -23,10 +23,10 @@
   },
   "homepage": "https://github.com/sunboyy/CropNFrame#readme",
   "dependencies": {
-    "angular": "^1.7.5",
+    "angular": "^1.7.7",
     "body-parser": "^1.18.3",
-    "bootstrap": "^3.3.7",
-    "croppie": "^2.6.2",
+    "bootstrap": "^3.4.1",
+    "croppie": "^2.6.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "font-awesome": "^4.7.0",
